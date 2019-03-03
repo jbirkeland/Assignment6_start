@@ -21,6 +21,15 @@ var churchillSpeech = {
     userNamePrompt,
     favoriteSpeechPrompt;
 
+var i = 0;
+
+while(i < speechesArray.length) {
+  console.log(i, "This speech is written by " + speechesArray[i].author);
+  i++;
+}
+   
+
+
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
@@ -93,11 +102,11 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 });
 
 
-userNamePrompt = window.prompt('Hello, what is your name?');
+//userNamePrompt = window.prompt('Hello, what is your name?');
 
-if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
-  console.log('Hi ' + userNamePrompt + '!');
-}else{
-  console.log('Ok, I\'ll just call you User.');
-  userNamePrompt = 'User';
-}
+//if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
+  //console.log('Hi ' + userNamePrompt + '!');
+//}else{
+  //console.log('Ok, I\'ll just call you User.');
+  //userNamePrompt = 'User';
+//}
