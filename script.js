@@ -21,6 +21,10 @@ var churchillSpeech = {
     userNamePrompt,
     favoriteSpeechPrompt;
 
+var oldestSpeech = 1940;
+
+var mostRecentSpeech = 1940;
+
 var i = 0;
 
 while(i < speechesArray.length) {
@@ -49,10 +53,14 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[0].year < speechesArray[1].year && speechesArray[0].year < speechesArray[2].year){
-    console.log('This is the oldest speech on the page.');
-  }else if(speechesArray[0].year > speechesArray[1].year && speechesArray[0].year > speechesArray[2].year){
-    console.log('This is the most recent speech on the page.');
+  for(i = 0; i < speechesArray.length; i++){
+    var oldestSpeech = 342;
+    var mostRecentSpeech = 1942;
+    if(speechesArray[i].year < oldestSpeech){
+      console.log('This is the oldest speech on the page.');
+    }else if(speechesArray[i].year > mostRecentSpeech){
+      console.log('This is the most recent speech on the page.');  
+    }
   }
 });
 
@@ -66,10 +74,14 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[1].year < speechesArray[0].year && speechesArray[1].year < speechesArray[2].year){
-    console.log('This is the oldest speech on the page.');
-  }else if(speechesArray[1].year > speechesArray[0].year && speechesArray[1].year > speechesArray[2].year){
-    console.log('This is the most recent speech on the page.');
+  for(i = 0; i < speechesArray.length; i++){
+    var oldestSpeech = 342;
+    var mostRecentSpeech = 1942;
+    if(speechesArray[i].year < oldestSpeech){
+      console.log('This is the oldest speech on the page.');
+    }else if(speechesArray[i].year >= mostRecentSpeech){
+      console.log('This is the most recent speech on the page.');  
+    }
   }
 });
 
@@ -83,10 +95,14 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[2].year < speechesArray[0].year && speechesArray[2].year < speechesArray[1].year){
-    console.log('This is the oldest speech on the page.');
-  }else if(speechesArray[2].year > speechesArray[0].year && speechesArray[2].year > speechesArray[1].year){
-    console.log('This is the most recent speech on the page.');
+  for(i = 0; i < speechesArray.length; i++){
+    var oldestSpeech = 342;
+    var mostRecentSpeech = 1942;
+    if(speechesArray[i].year <= oldestSpeech){
+      console.log('This is the oldest speech on the page.');
+    }else if(speechesArray[i].year > mostRecentSpeech){
+      console.log('This is the most recent speech on the page.');  
+    }
   }
 });
 
